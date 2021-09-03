@@ -1,0 +1,38 @@
+@import "@/common/scss/style/_handle.scss";
+@mixin fcc($m1:center, $m2:center) {
+  display: flex;
+  align-items: $m1;
+  justify-content: $m2;
+}
+
+@mixin fcs($m1:center, $m2:space-between) {
+  display: flex;
+  align-items: $m1;
+  justify-content: $m2;
+}
+
+@mixin fce($m1:center, $m2:space-between) {
+  display: flex;
+  align-items: $m1;
+  justify-content: $m2;
+  &:before,&:after { // 解决 justify-content: space-evenly; 机型不兼容问题 模拟justify-content: space-evenly;
+    content: '';
+    display: block;
+  }
+}
+
+@mixin fcf($m1:center, $m2:flex-end) {
+  display: flex;
+  align-items: $m1;
+  justify-content: $m2;
+}
+
+@mixin fci($m1:center) {
+  display: flex;
+  align-items: $m1;
+}
+
+@mixin fic($m2:center) {
+  display: flex;
+  justify-content: $m2;
+}
